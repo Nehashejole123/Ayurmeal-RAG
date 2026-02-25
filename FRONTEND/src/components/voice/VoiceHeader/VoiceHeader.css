@@ -1,0 +1,86 @@
+/* src/components/voice/VoiceHeader/VoiceHeader.css */
+
+.voice-header-card {
+  background-color: transparent;
+  padding: 1rem 0; /* Reduced side padding to rely on flex centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures the card takes full width of the parent center div */
+}
+
+.voice-loader {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  height: 40px;
+  line-height: 40px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Forces content to absolute center */
+  
+  /* Use GAP instead of padding-left for perfect spacing */
+  gap: 12px; 
+}
+
+.voice-words {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  
+  /* CRITICAL FIX: Fixed width equal to the longest word ("Stay Healthy").
+     This stops the layout from shifting left/right when words change. 
+     Adjust 160px if you change font size. */
+  width: 160px; 
+}
+
+.voice-words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 10%, 
+    transparent 90%
+  );
+  z-index: 20;
+}
+
+.voice-word {
+  display: block;
+  height: 100%;
+  
+  /* REMOVED padding-left (We used gap in parent instead) */
+  padding-left: 0; 
+  
+  font-size: 26px; 
+  font-weight: 600;
+  
+  background: linear-gradient(
+    90deg, 
+    #a855f7, 
+    #06b6d4, 
+    #3b82f6 
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  /* Ensures text aligns to start of the fixed box */
+  text-align: left; 
+  white-space: nowrap; /* Prevents "Stay Healthy" from breaking */
+  
+  animation: spin_words 6s infinite cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes spin_words {
+  0% { transform: translateY(0%); }
+  25% { transform: translateY(-100%); }
+  33% { transform: translateY(-100%); }
+  58% { transform: translateY(-200%); }
+  66% { transform: translateY(-200%); }
+  91% { transform: translateY(-300%); }
+  100% { transform: translateY(-300%); }
+}

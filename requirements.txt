@@ -1,0 +1,40 @@
+ # --- Frontend (UI) ---
+streamlit
+requests
+
+# --- Backend (API) ---
+fastapi
+uvicorn
+pydantic
+python-dotenv
+
+# --- AI & LangChain Core ---
+langchain
+langchain-core
+langchain-community
+langchain-classic 
+langchain-redis
+
+# --- Models & API Providers ---
+langchain-groq
+langchain-huggingface
+sentence-transformers
+
+# --- Database & Search (The Brain) ---
+faiss-cpu
+rank_bm25
+
+# --- Document Processing ---
+pypdf
+
+# --- Redis for Vector Storage(semantic search) ---
+ redis
+ langchain-redis
+
+# --- Fuzzy Matching ---
+ rapidfuzz
+
+ SpeechRecognition
+ pygame
+ edge-tts
+pipwin
