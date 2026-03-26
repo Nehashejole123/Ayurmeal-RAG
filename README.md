@@ -32,5 +32,5 @@ conda activate venv/
     npm run build
 # if redis not found - disable the vpn 
 (docker start redis-stack )-run this in vs code terminal
-![alt text](<karun ai screenshot.png>) 
-![alt text](<Screenshot 2026-01-31 094236.png>)
+![alt text](FRONTEND/assets/karun%20ai%20screenshot.png) 
+![alt text](FRONTEND/assets/Screenshot%202026-01-31%20094236.png)
