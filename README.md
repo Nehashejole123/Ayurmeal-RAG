@@ -1,5 +1,4 @@
-# if redis not found - disable the vpn 
-(docker start redis-stack )-run this in vs code terminal
+
 
 # How to Run 
 
@@ -31,4 +30,7 @@ conda activate venv/
 
 3) If your frontend folder does not have folder named dist then run this command : 
     npm run build
-
+# if redis not found - disable the vpn 
+(docker start redis-stack )-run this in vs code terminal
+![alt text](<karun ai screenshot.png>) 
+![alt text](<Screenshot 2026-01-31 094236.png>)
